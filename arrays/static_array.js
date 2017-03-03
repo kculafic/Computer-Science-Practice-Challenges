@@ -16,7 +16,12 @@ const FixedArray = require('./fixed_array');
 //     newFa.length === 4
 
 function arrayPush(array, item) {
-
+  const newArr = new FixedArray(array.length + 1);
+  for (var i = 0; i < array.length; i++) {
+    newArr.set(i, array[i])
+  }
+  newArr.set(array.length, item)
+  return newArr
 }
 
 // Write a function named arrayDelete which takes in the following as arguments:
