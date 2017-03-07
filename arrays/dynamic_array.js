@@ -28,8 +28,18 @@ class DynamicArray {
   // adds the item to the end of the array, copying it to a new FixedArray if
   // necessary. There is no need to return anything.
   push(item) {
+    this.newArr = new FixedArray( (length + 1) * 2);
 
+    for (var i = 0; i < this.array.length; i++) {
+      this.newArr.set(i, this.array[i])
+    }
+    console.log(this.newArr);
+
+    this.newArr.set((this.array.length + 1), item)
+    return this.newArr
   }
+
+
 
   // Implement a method pop that does not take in any arguments. It delete the
   // item at the end of the array.
