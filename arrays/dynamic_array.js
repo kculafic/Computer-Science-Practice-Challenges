@@ -33,7 +33,7 @@ class DynamicArray {
     for (var i = 0; i < this.array.length; i++) {
       this.newArr.set(i, this.array[i])
     }
-    console.log(this.newArr);
+    console.log(this.newArr); 
 
     this.newArr.set((this.array.length + 1), item)
     return this.newArr
