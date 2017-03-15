@@ -5,8 +5,23 @@ function swap(arr, idx1, idx2) {
 }
 
 function bubbleSort(arr) {
+  let placeholder = 0;
+  let isSorted = false;
 
+  while (!isSorted) {
+    isSorted = true
+    for (let i = 0; i < (arr.length - 1); i++) {
+      if (arr[i] > arr[i+1]) {
+        placeholder = arr[i];
+        arr[i] = arr[i+1];
+        arr[i+1] = placeholder;
+        isSorted = false
+      }
+    }
+  }
+  return arr
 }
+
 
 function selectionSort(arr) {
 
